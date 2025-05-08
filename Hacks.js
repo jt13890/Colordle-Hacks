@@ -56,3 +56,5 @@ function findTodaysColordleColorWithNativeDates() {
 }
 
 findTodaysColordleColorWithNativeDates();
+
+//Created by Tucker Technologies.
