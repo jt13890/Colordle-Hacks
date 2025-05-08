@@ -13,21 +13,19 @@ function findTodaysColordleColorWithNativeDates() {
       console.log('Successfully fetched the list of all possible colors. Count:', allColors.length);
 
       // Define the start date: August 7, 2023
-      // JavaScript months are 0-indexed (0 for January, 7 for August)
+     
       const startDate = new Date(2023, 7, 7); // Year, Month (0-11), Day
-      // It's important to set the time to the beginning of the day for consistent day diff calculation
-      startDate.setHours(0, 0, 0, 0);
+          startDate.setHours(0, 0, 0, 0);
 
 
-      const today = new Date(); // Gets the current date and time
-      // Also set today's time to the beginning of the day for fair comparison
+      const today = new Date(); 
       today.setHours(0, 0, 0, 0);
 
 
-      // Calculate the difference in milliseconds
+      
       const diffInMilliseconds = today.getTime() - startDate.getTime();
 
-      // Convert milliseconds to days (1 day = 24 * 60 * 60 * 1000 milliseconds)
+      
       const millisecondsPerDay = 24 * 60 * 60 * 1000;
       const daysPassed = Math.floor(diffInMilliseconds / millisecondsPerDay);
 
